@@ -18,6 +18,10 @@ app.use(
 app.use(express.json());
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
+app.get('/', (_req, res) => {
+  res.json({ message: 'RoomIt API is running. Access endpoints via /api' });
+});
+
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
