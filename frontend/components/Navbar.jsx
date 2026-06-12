@@ -14,9 +14,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600 text-sm font-bold text-white">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-3 sm:flex-row sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-2.5 self-start sm:self-auto">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-600 text-sm font-bold text-white">
             R
           </span>
           <div>
@@ -25,7 +25,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <nav className="flex items-center gap-1 rounded-lg bg-slate-100 p-1">
+        <nav className="flex w-full items-center gap-1 overflow-x-auto rounded-lg bg-slate-100 p-1 sm:w-auto sm:overflow-visible">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
