@@ -154,28 +154,28 @@ async function seed() {
 
   const rooms = await Room.create([
     {
-      name: 'Aurora',
+      name: 'Executive Boardroom',
       location: 'East Wing',
       floor: '3rd Floor',
       capacity: 8,
       bufferMinutes: 10,
     },
     {
-      name: 'Summit',
+      name: 'Conference Room A',
       location: 'West Wing',
       floor: '2nd Floor',
       capacity: 12,
       bufferMinutes: 10,
     },
     {
-      name: 'Harbor',
+      name: 'Conference Room B',
       location: 'North Wing',
       floor: '4th Floor',
       capacity: 6,
       bufferMinutes: 15,
     },
     {
-      name: 'Cedar',
+      name: 'Huddle Room 1',
       location: 'South Wing',
       floor: '1st Floor',
       capacity: 10,
