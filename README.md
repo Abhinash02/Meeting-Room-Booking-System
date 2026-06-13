@@ -6,8 +6,8 @@ Internal tool for booking meeting rooms with database-level conflict prevention,
 
 | Service  | URL |
 |----------|-----|
-| Frontend | _Add your Vercel frontend URL after deploy_ |
-| Backend  | _Add your Vercel backend URL after deploy_ |
+| Frontend | https://bookmeetingroom-one.vercel.app |
+| Backend  | backend-meeting-room.vercel.app |
 
 ## Section 4 items implemented
 
