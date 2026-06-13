@@ -36,6 +36,11 @@ cd backend && npm run dev
 cd backend && npm run seed
 npm run test:concurrency
 ```
+<img width="842" height="401" alt="Screenshot 2026-06-12 201958" src="https://github.com/user-attachments/assets/239ebec9-f570-436d-b950-57c23bfabd6c" />
+
+# Fire Same slot booking same time but succed only one
+<img width="941" height="450" alt="Screenshot 2026-06-12 202019" src="https://github.com/user-attachments/assets/e0df4578-9e5f-45e9-83cc-47787e233123" />
+<img width="1006" height="347" alt="Screenshot 2026-06-12 202036" src="https://github.com/user-attachments/assets/22b7303f-664c-4df7-8ecb-86dfcedf681b" />
 
 Expected output: exactly **1 success (201)** and **1 conflict (409)**.
 
@@ -135,7 +140,7 @@ Deploy **frontend** and **backend** as two separate Vercel projects.
 
 1. Import the repo, set root directory to `backend`
 2. Add env vars: `MONGODB_URI`, `CORS_ORIGIN` (your frontend URL)
-3. Deploy — Vercel uses `api/index.js` via `vercel.json`
+3. Deploy — Vercel uses `api/server.js` via `vercel.json`
 
 ### Frontend
 
