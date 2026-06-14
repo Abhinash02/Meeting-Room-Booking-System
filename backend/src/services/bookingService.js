@@ -139,7 +139,7 @@ export async function cancelBooking(bookingId) {
       await releaseDailyQuota(booking.bookedBy.email, booking.date, booking.durationMinutes, session);
 
       result = {
-        booking: await Booking.findById(booking._id).populate('room').lean(),
+        booking: await Booking.findById(booking._id).populate('room').session(session).lean(),
         refundable,
         message: refundable
           ? 'Cancelled with refundable status (≥2 hours before start)'
