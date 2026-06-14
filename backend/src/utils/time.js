@@ -52,9 +52,9 @@ export function buildSlotRange(startTime, endTime) {
 }
 
 export function getBookingStartDateTime(date, startTime) {
-  const [year, month, day] = date.split('-').map(Number);
-  const [hours, minutes] = startTime.split(':').map(Number);
-  return new Date(year, month - 1, day, hours, minutes, 0, 0);
+  // Vercel ignores the TZ env var in some regions, so we explicitly
+  // parse the date string as IST (Indian Standard Time / +05:30).
+  return new Date(`${date}T${startTime}:00+05:30`);
 }
 
 export function getDurationMinutes(startTime, endTime) {
