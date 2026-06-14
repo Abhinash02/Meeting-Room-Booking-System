@@ -138,8 +138,10 @@ export async function cancelBooking(bookingId) {
       await BookingSlot.deleteMany({ booking: booking._id }).session(session);
       await releaseDailyQuota(booking.bookedBy.email, booking.date, booking.durationMinutes, session);
 
+      await booking.populate('room');
+
       result = {
-        booking: await Booking.findById(booking._id).populate('room').session(session).lean(),
+        booking: booking.toJSON(),
         refundable,
         message: refundable
           ? 'Cancelled with refundable status (≥2 hours before start)'
